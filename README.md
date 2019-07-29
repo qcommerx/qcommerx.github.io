@@ -1,1 +1,0 @@
-# qcommerxbr.github.io
