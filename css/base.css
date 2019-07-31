@@ -80,6 +80,9 @@ nav .social {
 	font-size: 1.5rem
 }
 
+strong {
+    font-weight: 700 !important;
+}
 body,
 html {
 	margin: 0;
