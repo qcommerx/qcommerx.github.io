@@ -130,19 +130,19 @@
 							<h3>Quer saber como ajudamos nossos clientes?</h3>
 							<h4>Receba nosso material completo de produtos.</h4>
 						</div>
-						<form action="/" method="post" onsubmit="return false">
+						<form>
 							<div class="input-group mb-3">
-								<input type="text" class="form-control form-control-lg"
-									placeholder="Deixe seu melhor e-mail" name="prospectmail">
+								<input required type="email" class="form-control form-control-lg"
+									placeholder="Deixe seu melhor e-mail" id="getEmail" name="prospectmail">
 								<div class="input-group-append">
-									<button class="btn btn-dark btn-lg" type="submit" id="button-addon2"
-										data-toggle="modal" data-target="#exampleModalCenter" <b>Quero Saber
-										Mais</b></button>
+									<button class="btn btn-dark btn-lg" type="button" onclick="RegisterEmail()">
+										<b> Quero Saber Mais</b></button>
 								</div>
 							</div>
+							
 						</form>
 						<!-- Modal -->
-						<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+						<div class="modal fade" id="thankYou" tabindex="-1" role="dialog"
 							aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 							<div class="modal-dialog modal-dialog-centered" role="document">
 								<div class="modal-content">
@@ -257,9 +257,10 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
+	<script
+	src="http://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 		crossorigin="anonymous"></script>
@@ -272,6 +273,27 @@
 				trigger: 'focus'
 			})
 		});
+
+		function RegisterEmail(){
+			if($('#getEmail').val() === ""){
+				return;
+			}
+
+	//		var userinput = $('#getEmail').val();
+	//		var pattern = new RegExp("@");  
+
+	//		if(!pattern.test(userinput)){
+	//			return;
+	//		}​
+
+
+			$.post( "https://hooks.zapier.com/hooks/catch/4441785/vswct7/", $('#getEmail').serialize())
+            .done(function() {
+				$('#getEmail').val("");
+				$('#thankYou').modal('show')
+            });
+		}
+
 
 		//$(function () {
   //$(document).scroll(function () {
