@@ -6,6 +6,9 @@ nav.scrolled {
   }
 
 */
+a.nav-link {
+    font-weight: bold !important;
+}
 html {
 	font-size: 1rem;
   }
