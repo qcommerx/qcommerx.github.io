@@ -255,6 +255,30 @@
 				</div>
 			</div>
 		</div>
+	<div class="modal fade" id="DownloadEbook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Ebook">Podemos te dar uma ajudinha?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-justify lead">Talvez não tenha ficado muito claro como nossos produtos e serviços funcionam, mas, nos dê uma chance de falarmos sobre eles!</p>
+                <h4 class="text-center">Saiba como podemos te ajudar</h4>
+                <img src="https://www.qcommerx.com.br/img/attention-user.svg" alt="SEO, Produtos, Analytics" class="rounded mx-auto d-block">
+                <div class="col text-center">
+                    <a href="https://www.qcommerx.com.br/docs/O-funil-re-inventado.pdf" class="btn btn-dark" alt="Baixar o Infográfico" download>Baixar o Infográfico</a>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 	</div>
 
 <script
@@ -268,39 +292,96 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 	<script>
-		$(function () {
-			$('[data-toggle="popover"]').popover({
-				trigger: 'focus'
-			})
-		});
+$(function() {
+    $('[data-toggle="popover"]').popover({
+        trigger: 'focus'
+    })
+  
+    localStorage.clickcount = 1;
+    console.log(localStorage.clickcount)
 
-		function RegisterEmail(){
-			if($('#getEmail').val() === ""){
-				return;
-			}
+    var myVar;
 
-	//		var userinput = $('#getEmail').val();
-	//		var pattern = new RegExp("@");  
+    function kk() {
+        $.getJSON('https://ipapi.co/json/').done(function(json) {
+            myVar = json;
+        });
+    }
+    var user = Math.floor(100000 + Math.random() * 900000);
 
-	//		if(!pattern.test(userinput)){
-	//			return;
-	//		}​
+    function UserDate() {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        var today = dd + '/' + mm + '/' + yyyy;
+        return today
+    };
+    $('div').on('mouseover', function() {
+        var live = UserDate()
+        var seconds = 0;
+        var currentId = $(this).attr('id');
+
+        function incrementSeconds(jData) {
+            jData = "";
+            seconds += 1;
+            $('#analytics').text('{"user":' + user + ',"id":"' + currentId + '","seconds":' + seconds + '}')
+            jData = JSON.stringify({
+                user,
+                live,
+                currentId,
+                seconds
+            })
+            return jData;
+        }
+        var cancel = setInterval(incrementSeconds, 1000);
+        $(this).on('mouseout', function() {
+            var notBlank = JSON.parse(incrementSeconds())
+            if (notBlank.currentId != "" && notBlank.seconds >= 4) {
+                console.log(notBlank)
+                $.post("https://hooks.zapier.com/hooks/catch/4441785/ob2s5lw/", notBlank).done(function() {
+
+                    if (localStorage.clickcount === "1") {
+                        $('#DownloadEbook').modal('show')
+                        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                    }
 
 
-			$.post( "https://hooks.zapier.com/hooks/catch/4441785/vswct7/", $('#getEmail').serialize())
-            .done(function() {
-				$('#getEmail').val("");
-				$('#thankYou').modal('show')
-            });
-		}
+                });
+            }
+            clearTimeout(cancel);
+            seconds = 0;
+            currentId = "";
+        })
+    })
+  
+	
+	
+	
+});
+
+function RegisterEmail() {
+    if ($('#getEmail').val() === "") {
+        return;
+    }
+}
 
 
-		//$(function () {
-  //$(document).scroll(function () {
-	//  var $nav = $(".fixed-bottom");
-	  //$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-	//});
-//});
+    $.post("https://hooks.zapier.com/hooks/catch/4441785/vswct7/", $('#getEmail').serialize())
+        .done(function() {
+            $('#getEmail').val("");
+            $('#thankYou').modal('show')
+        });
+}
+
+
+
 	</script>
 </body>
 
