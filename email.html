@@ -166,17 +166,30 @@
     <script>
 function sendEmail()
 {
-  $('#send-button').addClass('disabled');
+  // You can test with your own account by getting a token here:
+// https://developers.google.com/oauthplayground/
+var accessToken = 'AIzaSyAE5d5vJY02eevcsBrCBDnV-UEoYuPSJsw';
+// Base64-encode the mail and make it URL-safe
+// (replace all '+' with '-' and all '/' with '_')
+var encodedMail = btoa([
+  'From: wladimir.silva@qcommerx.com.br\r\n',
+  'To: silva.wladimir@hotmail.com\r\n',
+  'Subject: Subject Text\r\n\r\n',
 
-  sendMessage(
-    {
-      'To': $('#compose-to').val(),
-      'Subject': $('#compose-subject').val()
-    },
-    $('#compose-message').val(),
-    
-  );
+  'Message Text'
+].join('')).replace(/\+/g, '-').replace(/\//g, '_');
 
+$.ajax({
+  method: 'POST',
+  url: 'https://www.googleapis.com/gmail/v1/users/me/messages/send',
+  headers: {
+    'Authorization': 'Bearer ' + accessToken,
+    'Content-Type': 'application/json'
+  },
+  data: JSON.stringify({
+    'raw': encodedMail
+  })
+});
   return false;
 }
       
