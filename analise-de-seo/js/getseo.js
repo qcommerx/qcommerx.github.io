@@ -57,13 +57,7 @@ $(document).ready(function () {
         $.ajax({
             url: "https://us-central1-dns1-248518.cloudfunctions.net/siteScore/?website=" + $('#website').val()
         }).done(function (data) {
-            /** On success send data to mailchimp */
-            $.ajax({
-                url: 'https://qcommerx.us20.list-manage.com/subscribe/post?u=a8e37df0c5e1262b5fa443807&amp;id=5b4269ed78',
-                dataType: 'html',
-                type: 'POST',
-                data: $('#mc-embedded-subscribe-form').serialize()
-            })
+           
             
             /** On success shows data and gauge refreshed*/
             seo = data
