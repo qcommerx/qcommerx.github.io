@@ -42,12 +42,12 @@ $(document).ready(function () {
     });
 
     /** Form prevent defaults */
-    $('#getStatus').on('submit', function (e) {
+    $('#mc-embedded-subscribe-form').on('submit', function (e) {
         e.preventDefault();
     })
 
     /** Form send info and get customer tests */
-    $('#getStatus').on('submit', function () {
+    $('#mc-embedded-subscribe-form').on('submit', function () {
         if (!$('#email').val() || $('#website').val().length < 4) { return; }
         $('#mymodal').modal({
             backdrop: 'static',
