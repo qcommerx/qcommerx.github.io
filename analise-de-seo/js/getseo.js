@@ -47,7 +47,7 @@ $(document).ready(function () {
     })
 
     /** Form send info and get customer tests */
-    $('#getStatus').on('click', function () {
+    $('#getResult').on('click', function () {
         if (!$('#email').val() || $('#website').val().length < 4) { return; }
         $('#mymodal').modal({
             backdrop: 'static',
