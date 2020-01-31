@@ -1,72 +1,159 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="./css/search.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js" integrity="sha256-TabprKdeNXbSesCWLMrcbWSDzUhpAdcNPe5Q53rn9Yg=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.3.3/justgage.min.js" integrity="sha256-TzjYvjsEIs10mbmsRBoOmlZYhsrpt4r/kAygxlzkmcQ=" crossorigin="anonymous"></script><title>Analise gratuíta de SEO! Saiba se seu site precisa de ajuda | QCommerx do Brasil</title></head><body><!--.progress.progress-bar(role='progressbar' style="width: 100%", aria-valuenow="100", aria-valuemin="0", aria-valuemax="100")--><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="#"><img src="https://www.qcommerx.com.br/img/logo.svg" style="width:150px"></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menunav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="menunav"><ul class="navbar-nav mr-auto"><li class="nav-item active"><a class="nav-link" href="#">Sobre<span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="#produtos">Preços</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais Informações</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Fale com a Gente</a><a class="dropdown-item" href="#">Analise de SEO</a><div class="dropdown-divider"></div><a class="dropdown-item" href="#">Inovação</a><a class="dropdown-item" href="#">Como funciona?</a></div></li></ul><form class="form-inline my-2 my-lg-0"><a class="btn btn-warning my-2 my-sm-0 rounded-pill" href="tel:+5511956692233"><b>(11) 95669-2233</b></a></form></div></nav><!--include container--><section class="container" id="seo"><div class="row mb-5"><div class="col-sm-12 col-md-6"><div class="row"><div class="col-sm-12 col-md-6"><div class="text-center my-3"><h1 class="display-4">Quer aumentar suas vendas?</h1></div></div><div class="col-sm-12 col-md-6"><div class="text-center my-3"><img src="img1.svg" style="max-width:300px"></div></div></div><div class="text-justify"><p class="lead">Use nossa ferramenta de analise e descubra quanto você pode melhorar suas vendas online.</p><p class="lead">Para acessar use seu melhor email!</p><form class="form-row was-validated" id="getStatus"><div class="col-sm-12 col-md-6"><div class="input-group"><input class="form-control" id="email" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="off" type="email" name="seuemail" placeholder="Seu melhor e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required></div></div><div class="col-sm-12 col-md-6"><div class="input-group"><input class="form-control" id="website" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="off" name="website" pattern="^(https://?!|http://?!|http?!)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$" placeholder="Analisar qual site?" required><div class="input-group-append"><button class="btn btn-secondary" id="getResult" type="submit"><i class="arrow fas fa-arrow-right"></i></button></div></div></div></form></div></div><div class="col-sm-12 col-md-6"><div class="row"><div class="col-12"><div class="text-left my-3"><div class="300x160px" id="gauge"></div></div></div><div class="col-12"><div class="progress"><div class="progress-bar bg-danger" role="progressbar" aria-valuenow="25" style="width: 25%" aria-valuemin="0" aria-valuemax="100">25%</div><div class="progress-bar bg-warning text-dark" role="progressbar" aria-valuenow="50" style="width: 25%" aria-valuemin="0" aria-valuemax="100">50%</div><div class="progress-bar bg-primary" role="progressbar" aria-valuenow="75" style="width: 25%" aria-valuemin="0" aria-valuemax="100">75%</div><div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" style="width: 25%" aria-valuemin="0" aria-valuemax="100">100%</div></div><p class="lead text-left font-weight-normal pt-2" id="site">Seu site: </p><table class="table table-sm table-responsive table-borderless"><tr><th class="text-uppercase text-center w-25 bg-dark text-light">Status</th><th class="text-uppercase text-center bg-dark text-light">Diagnóstico	</th></tr><tr><th class="text-center w-25 bg-light"><div class="rounded py-4"><small class="text-dark lead font-weight-bold">0%-25%</small></div></th><td class="bg-light"><div class="bg-white rounded p-2 m-2"><small>Website com baixa possibilidade de vendas online. Requer melhorias técnicas.</small></div></td></tr><tr><th class="text-center w-25 bg-light"><div class="rounded py-4"><small class="text-dark lead font-weight-bold"> 26%-50%</small></div></th><td class="bg-light"><div class="bg-white rounded p-2 m-2"><small>Website com boa possibilidade de vendas online. Requer ajustes e analise.</small></div></td></tr><tr><th class="text-center w-25 bg-light"><div class="rounded py-4"><small class="text-dark lead font-weight-bold">51%-75%</small></div></th><td class="bg-light"><div class="bg-white rounded p-2 m-2"><small>Website com grande capacidade de vendas online. Recomendamos o uso de Google Ads para impulsionar as vendas.</small></div></td></tr><tr><th class="text-center w-25 bg-light"><div class="rounded py-4"><small class="text-dark lead font-weight-bold">76%-100%</small></div></th><td class="bg-light"><div class="bg-white rounded p-2 m-2"><small>Website com excelente capacidade de vendas online. Recomendamos monitorar as alterações para garantir o score.</small></div></td></tr></table></div></div></div><div class="modal" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-body text-center"><div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"><span class="sr-only">Loading...</span></div><div clas="loader-txt"><p class="lead">Aguarde, estamos coletando as informações...</p><small>Analisando SEO!</small></div></div></div></div></div><div class="modal" id="modalerror" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel"><div class="modal-dialog modal-sm" role="document"><div class="modal-content"><div class="modal-body text-center"><i class="fas fa-times text-danger display-4"></i><div clas="loader-txt"><p class="lead text-danger">Ocorreu um erro!</p><small>Execute novamente...</small></div></div></div></div></div></div></section><footer class="container-fluid" id="footer"><div class="row"><div class="col-sm-12 col-md-6 bg-white text-justify"><h3>Sobre a QCommerx</h3><hr class="bg-warning mt-0 mb-4"><p class="lead">Nascida em 2018 a QCommerx foca em empreendedores com necessidade de tecnologia, nossa proposta acredita que investir nas ferramentas certas darão sucesso aos nossos clientes.</p></div><div class="col-sm-12 col-md-6 bg-white"><!-- Begin Mailchimp Signup Form--><div id="mc_embed_signup"></div><form class="validate" id="mc-embedded-subscribe-form" action="https://qcommerx.us20.list-manage.com/subscribe/post?u=a8e37df0c5e1262b5fa443807&amp;id=5b4269ed78" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate=""><div id="mc_embed_signup_scroll"></div><h3>Entrar em contato</h3><hr class="bg-warning mt-0 mb-4"><div class="indicates-required mt-0"><span class="asterisk text-black">*Precisa ser preenchido</span></div><div class="mc-field-group"><label class="font-weight-bold mt-2" for="mce-EMAIL">Seu melhor e-mail  </label><span class="asterisk">*</span><input class="bg-dark text-white form-control form-control-sm required email" id="mce-EMAIL" type="email" value="" name="EMAIL"></div><div class="mc-field-group"><label class="font-weight-bold mt-2" for="mce-FNAME">Como voc&ecirc; quer ser chamado? </label><input class="bg-dark text-white form-control form-control-sm" id="mce-FNAME" type="text" value="" name="FNAME"></div><div class="clear" id="mce-responses"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a8e37df0c5e1262b5fa443807_5b4269ed78" tabindex="-1" value=""></div><div class="clear"><input class="button btn btn-warning text-dark my-3" id="mc-embedded-subscribe" type="submit" value="Entrar em contato" name="subscribe"></div></form><!-- End mc_embed_signup--></div></div><div class="row"><div class="col-12 bg-dark text-white"><div class="text-center my-2"><ul class="list-inline"><li class="list-inline-item">@2019</li><li class="list-inline-item"><a class="text-white" href="https://www.qcommerx.com.br">Qcommerx do Brasil</a></li></ul></div></div></div></footer><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script>$(document).ready(function(){
-	/** Random integer  */
-	function getRandomInt(min, max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-	
+<!DOCTYPE html>
+<html>
 
-	  var seo = 0;
-	  var web = "";
-	  var g = new JustGage({
-		id: "gauge",
-		value: seo,
-		min: 0,
-		max: 100,
-		title: "Visitors",
-		label: web,
-		symbol: '%',
-		pointer: true,
-		counter: true,
-		customSectors: {
-			percents: true,
-			ranges: [{
-				color: '#1ffa0f',
-				lo: 76,
-				hi: 100
-				}, {
-				color: '#0f1bfa',
-				lo: 51,
-				hi: 75
-				}, {
-				color: '#fae60f',
-				lo: 26,
-				hi: 50
-				},{
-				color: '#fa2a0f',
-				lo: 0,
-				hi: 25
-			}]
-		},
-		relativeGaugeSize: true
-	});
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Analise gratuíta de SEO! Saiba se seu site precisa de ajuda | QCommerx do Brasil</title>
+    <meta name="twitter:description" content="Descubra a performance do seu site de vendas!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/ranking-seo.svg">
+    <meta name="twitter:title" content="Analise gratuíta de SEO! Saiba se seu site precisa de ajuda | QCommerx do Brasil">
+    <meta name="description" content="Analise de SEO gratuíta, testamos a performance do seu site.">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"
+		integrity="sha256-TabprKdeNXbSesCWLMrcbWSDzUhpAdcNPe5Q53rn9Yg=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.3.3/justgage.min.js"
+		integrity="sha256-TzjYvjsEIs10mbmsRBoOmlZYhsrpt4r/kAygxlzkmcQ=" crossorigin="anonymous"></script>
+</head>
 
-	$('#getStatus').on('submit', function(e){
-		e.preventDefault();
-		})
+<body>	<nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="#"><img
+				src="https://www.qcommerx.com.br/img/logo.svg" style="width:150px"></a><button class="navbar-toggler"
+			type="button" data-toggle="collapse" data-target="#menunav" aria-controls="navbarSupportedContent"
+			aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="menunav">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="https://www.qcommerx.com.br">Inicial<span class="sr-only">(current)</span></a>
+				</li>
+				
+			</ul>
+			<form class="form-inline my-2 my-lg-0"><a class="btn btn-warning my-2 my-sm-0 rounded-pill"
+					href="tel:+5511956692233"><b>(11) 95669-2233</b></a></form>
+		</div>
+	</nav>
+    <!-- Start: 1 Row 2 Columns -->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4 text-center">Quer aumentar suas vendas?<br></h1>
+                    <p class="lead text-justify">Use nossa ferramenta de analise e descubra quanto você pode melhorar suas vendas online.<br></p><img src="assets/img/ranking-seo.svg">
+                    <form id="getStatus" class="was-validated">
+                        <div class="form-group d-inline form-inline"><input class="form-control mr-1 my-2" type="email" id="mce-EMAIL" name="EMAIL" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required="required" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Seu melhor email">
+                            <input
+                                class="form-control mr-0 my-2" type="text" id="mce-WEBSITE" name="WEBSITE" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" pattern="^(https://?!|http://?!|http?!)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$"
+                                required="required" placeholder="Qual site analisar?"><button class="btn btn-dark d-inline btn-sm-block my-2" id="getResult" type="submit"><i class="fa fa-arrow-right"></i></button></div>
+                    </form>
+                </div>
+                <div class="col-md-6">				<div class="row">
+					<div class="col-12">
+						<div class="text-left my-3">
+							<div class="300x160px" id="gauge"></div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="progress">
+							<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="25" style="width: 25%"
+								aria-valuemin="0" aria-valuemax="100">25%</div>
+							<div class="progress-bar bg-warning text-dark" role="progressbar" aria-valuenow="50"
+								style="width: 25%" aria-valuemin="0" aria-valuemax="100">50%</div>
+							<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="75"
+								style="width: 25%" aria-valuemin="0" aria-valuemax="100">75%</div>
+							<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100"
+								style="width: 25%" aria-valuemin="0" aria-valuemax="100">100%</div>
+						</div>
+						<p class="lead text-left font-weight-normal pt-2" id="site">Seu site: </p>
+						<table class="table table-sm table-responsive table-borderless">
+							<tr>
+								<th class="text-uppercase text-center w-25 bg-dark text-light">Status</th>
+								<th class="text-uppercase text-center bg-dark text-light">Diagnóstico </th>
+							</tr>
+							<tr>
+								<th class="text-center w-25 bg-light">
+									<div class="rounded py-4"><small
+											class="text-dark lead font-weight-bold">0%-25%</small></div>
+								</th>
+								<td class="bg-light">
+									<div class="bg-white rounded p-2 m-2"><small>Website com baixa possibilidade de
+											vendas online. Requer melhorias técnicas.</small></div>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-center w-25 bg-light">
+									<div class="rounded py-4"><small class="text-dark lead font-weight-bold">
+											26%-50%</small></div>
+								</th>
+								<td class="bg-light">
+									<div class="bg-white rounded p-2 m-2"><small>Website com boa possibilidade de vendas
+											online. Requer ajustes e analise.</small></div>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-center w-25 bg-light">
+									<div class="rounded py-4"><small
+											class="text-dark lead font-weight-bold">51%-75%</small></div>
+								</th>
+								<td class="bg-light">
+									<div class="bg-white rounded p-2 m-2"><small>Website com grande capacidade de vendas
+											online. Recomendamos o uso de Google Ads para impulsionar as vendas.</small>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="text-center w-25 bg-light">
+									<div class="rounded py-4"><small
+											class="text-dark lead font-weight-bold">76%-100%</small></div>
+								</th>
+								<td class="bg-light">
+									<div class="bg-white rounded p-2 m-2"><small>Website com excelente capacidade de
+											vendas online. Recomendamos monitorar as alterações para garantir o
+											score.</small></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>			<div class="modal" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-body text-center">
+							<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+								<span class="sr-only">Loading...</span></div>
+							<div clas="loader-txt">
+								<p class="lead">Aguarde, estamos coletando as informações...</p><small>Analisando
+									SEO!</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="modalerror" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+				<div class="modal-dialog modal-sm" role="document">
+					<div class="modal-content">
+						<div class="modal-body text-center"><i class="fas fa-times text-danger display-4"></i>
+							<div clas="loader-txt">
+								<p class="lead text-danger">Ocorreu um erro!</p><small>Execute novamente...</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></div>
+            </div>
+        </div>
+    </div>
+    <!-- End: 1 Row 2 Columns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
 
-	$('#getStatus').on('submit', function(){
-		if(!$('#email').val() || $('#website').val().length < 4 ){ return;}
-		$('#mymodal').modal({
-			backdrop: 'static',
-			keyboard: false
-		})
-
-		$.ajax({
-			url: "https://us-central1-dns1-248518.cloudfunctions.net/siteScore/?website="+$('#website').val()
-			}).done(function(data) {
-				seo = data
-				web = $('#website').val()
-				$('#site').html("Seu site: " + web)
-				$('#mymodal').modal('hide')
-				g.refresh(seo);
-				$('#email').val('')
-				$('#website').val('')
-
-			}).fail(function (data) {
-				$('#mymodal').modal('hide')
-				$('#modalerror').modal('show')
-				$('#website').val('')
-			});
-		})
-
-});</script></body></html>
+</html>
