@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://www.qcommerx.com.br/a-empresa</loc>
+        <loc>https://www.qcommerx.com.br/privacidade/index.html</loc>
     </url>
     <url>
-        <loc>https://www.qcommerx.com.br/desenvolvimento-site</loc>
-    </url>
-    <url>
-        <loc>https://www.qcommerx.com.br/hospedagem</loc>
-    </url>
-    <url>
-        <loc>https://www.qcommerx.com.br/privacidade</loc>
-    </url>
-    <url>
-        <loc>https://www.qcommerx.com.br</loc>
+        <loc>https://www.qcommerx.com.br/index.html</loc>
     </url>
 </urlset>
