@@ -59,14 +59,14 @@
         </div>
         <div class="row g-0" id="websites" v-if="state.websites">
             <div class="col-lg-4" v-for="web in filteredItems" :key="web.id">
-                <div class="card-websites bg-white m-2"><img class="img-fluid" v-bind:src="web.images">
+                <div class="card-websites bg-white m-2"><img class="img-fluid img-site" v-bind:src="web.images">
                     <h2 class="m-2" style="font-family:Anton;">{{web.title}}<br></h2>
                     <div class="d-flex justify-content-between m-2"><small>{{web.description}}<br></small><small class="fw-bold">{{web.price}}<br></small></div><a class="btn btn-secondary btn-lg bt-0 text-white" role="button" v-on:click="showCard(web)" href="#top">Saiba mais&nbsp;<i class="icon ion-plus-circled"></i></a>
                 </div>
             </div>
         </div>
         <div class="row" id="detail" v-if="state.detail">
-            <div class="col-lg-10 offset-lg-1 card-websites over-y bg-white"><img class="img-fluid align-self-center over-y shadow" style="min-width:200px" v-bind:src="detail.images">
+            <div class="col-lg-10 offset-lg-1 card-websites over-y bg-white"><img class="img-fluid align-self-center over-y shadow img-site" style="min-width:200px" v-bind:src="detail.images">
                 <div data-aos="slide-right" data-aos-once="true" class="position-absolute top-0 over-y px-4 py-2 shadow bg-dark text-white card-websites">
                     <h6 style="font-family: Anton, sans-serif;color: var(--bs-white);"><i class="icon ion-android-globe fs-4 mx-2"></i>{{detail.brief}}<br></h6>
                     <div class="card-websites bg-danger m-2"><a class="text-center" v-on:click="hideCard(web)" role="button" href="#top">Voltar&nbsp;<i class="icon ion-backspace"></i></a></div>
