@@ -44,7 +44,7 @@
 
 <body>
     <!-- Start: header-qc -->
-    <div class="main-nav mb-2 container-fluid"><img class="logo ms-3" src="../assets/img/logo_normal.svg" alt="logo da empresa circular e amarelo" title="QCommerx - Melhor site para compras de templates e apps">
+    <div class="main-nav mb-2 container-fluid"><a href="https://www.qcommerx.com.br" rel="dofollow"><img class="logo ms-3" src="../assets/img/logo_normal.svg" alt="logo da empresa circular e amarelo" title="QCommerx - Melhor site para compras de templates e apps"></a>
         <ul class="list-inline text-uppercase list-company d-inline float-end mt-3 px-5">
             <li class="list-inline-item grow ps-3 link-hover"><i class="icon ion-key p-2"></i><a href="https://www.qcommerx.com.br/privacidade">Privacidade</a></li>
             <li class="list-inline-item grow ps-3 link-hover"><i class="icon ion-briefcase p-2"></i><a href="https://www.qcommerx.com.br/a-empresa">empresa</a></li>
@@ -52,9 +52,9 @@
     </div><!-- End: header-qc -->
     <div class="container" id="auditor">
         <div class="row mt-5">
-            <div class="col">
+            <div class="col-12">
                 <div class="d-flex">
-                    <h2 id="servicos">Site Auditor<sup class="mx-1 fs-6 beta">beta</sup></h2><span class="spinner-border text-warning m-3" role="status" v-bind:class="{'d-flex':auditing, 'd-none':!auditing}"></span>
+                    <h1 id="servicos" style="font-size:calc(0.5)">Site Auditor<sup class="mx-1 fs-6 beta">beta</sup></h1><span class="spinner-border text-warning m-3" role="status" v-bind:class="{'d-flex':auditing, 'd-none':!auditing}"></span>
                 </div>
                 <p class="lead">Aqui você pode auditar qualquer metatags de um site e identificar possíveis melhorias.</p><!-- Start: search -->
                 <div id="search" class="searchbar d-flex"><a v-bind:class="{'d-block': closeX, 'd-none': !closeX}"><i class="icon ion-close close d-flex" v-bind:class="{'d-block': closeX, 'd-none': !closeX}" v-on:click="clearSearch"></i></a><input type="text" class="form-control form-control-lg" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" v-model="search" v-bind:placeholder="placeholder" v-on:focus="onFocus" v-on:blur="onBlur"><a class="btn px-2 d-flex" role="button" style="font-size: calc(1.2rem);" v-on:click="checkBeforeGo();"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-search fs-4 mx-2 mt-1">
