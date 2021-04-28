@@ -15,6 +15,7 @@
     <meta property="og:image" content="https://www.qcommerx.com.br/assets/img/512.png">
     <meta name="twitter:image" content="https://www.qcommerx.com.br/assets/img/512.png">
     <meta name="twitter:description" content="O melhor site de 2021 para comprar templates e apps para seu projeto. Desenvolvemos diversos modelos.">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/img/180.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="180x180" href="../assets/img/180.png">
@@ -25,9 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
-    <link rel="stylesheet" href="../assets/css/empresa.min.css">
     <link rel="stylesheet" href="../assets/css/websites.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 <!-- Hotjar Tracking Code for www.qcommerx.com.br -->
 <script>
     (function(h,o,t,j,a,r){
@@ -50,31 +51,34 @@
         </ul>
     </div>
     <div class="container pt-4" id="store">
-        <div class="row" id="intro" v-if="state.searchbar">
+        <div class="row" id="intro" v-show="state.searchbar">
             <div class="col-lg-10 offset-lg-1 mb-5">
                 <h1 class="text-center mb-0 justify-content-center d-flex">Nosso Portfólio de Templates<br></h1>
                 <p class="text-center lead justify-content-center d-flex">Clique em cada um deles para visualizar as funcionalidades e estilos.<br></p>
                 <div id="search" class="searchbar"><a v-bind:class="{'d-block': closeX, 'd-none': !closeX}"><i class="icon ion-close close d-flex" v-bind:class="{'d-block': closeX, 'd-none': !closeX}" v-on:click="clearSearch"></i></a><input type="text" class="form-control form-control-lg" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" v-model="search" v-bind:placeholder="placeholder" v-on:focus="onFocus" v-on:blur="onBlur"></div>
             </div>
         </div>
-        <div class="row g-0" id="websites" v-if="state.websites">
+        <div class="row g-0" id="websites" v-show="state.websites">
             <div class="col-lg-4" v-for="web in filteredItems" :key="web.id">
-                <div class="card-websites bg-white m-2"><img class="img-fluid img-site" v-bind:src="web.images">
+                <div class="card-websites m-2"><img class="img-fluid img-site" v-bind:src="web.images">
                     <h2 class="m-2" style="font-family:Anton;">{{web.title}}<br></h2>
-                    <div class="d-flex justify-content-between m-2"><small>{{web.description}}<br></small><small class="fw-bold">{{web.price}}<br></small></div><a class="btn btn-secondary btn-lg bt-0 text-white" role="button" v-on:click="showCard(web)" href="#top">Saiba mais&nbsp;<i class="icon ion-plus-circled"></i></a>
+                    <div class="d-flex justify-content-between m-2"><small>{{web.brief}}<br></small><small class="fw-bold">{{web.price}}<br></small></div><a class="btn btn-lg bt-0 btn-web" role="button" v-on:click="showCard(web)" href="#top">Saiba mais&nbsp;<i class="icon ion-plus-circled"></i></a>
                 </div>
             </div>
         </div>
-        <div class="row" id="detail" v-if="state.detail">
-            <div class="col-lg-10 offset-lg-1 card-websites over-y bg-white"><img class="img-fluid align-self-center over-y shadow img-site" style="min-width:200px" v-bind:src="detail.images">
+        <div class="row" id="detail" v-show="state.detail">
+            <div class="col-lg-10 offset-lg-1 card-websites over-y">
+                <div class="align-self-center over-y gallery" data-bss-baguettebox="">
+                    <div class="photos"><a rel="dofolllow" v-bind:href.prevent.stop="detail.images" v-on:click="baguette($emit)"><img class="img-fluid shadow img-site" style="min-width:200px" v-bind:src="detail.images" v-bind:alt="detail.title"></a></div>
+                </div>
                 <div data-aos="slide-right" data-aos-once="true" class="position-absolute top-0 over-y px-4 py-2 shadow bg-dark text-white card-websites">
                     <h6 style="font-family: Anton, sans-serif;color: var(--bs-white);"><i class="icon ion-android-globe fs-4 mx-2"></i>{{detail.brief}}<br></h6>
-                    <div class="card-websites bg-danger m-2"><a class="text-center" v-on:click="hideCard(web)" role="button" href="#top">Voltar&nbsp;<i class="icon ion-backspace"></i></a></div>
+                    <div class="card-websites bg-danger m-2"><a class="text-center px-3" v-on:click="hideCard()" role="button" href="#top">Voltar&nbsp;<i class="icon ion-backspace"></i></a></div>
                 </div>
                 <ul class="list-inline m-auto">
-                    <li class="list-inline-item"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/html5-icon.jpg" title="Feito com HTML5"></li>
-                    <li class="list-inline-item"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/bootstrap-icon.jpg" title="Atualizado para Bootstrap 5"></li>
-                    <li class="list-inline-item"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/sass-icon.jpg" title="Arquivo SASS disponível"></li>
+                    <li class="list-inline-item m-0"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/html5-icon.jpg" title="Feito com HTML5"></li>
+                    <li class="list-inline-item m-0"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/bootstrap-icon.jpg" title="Atualizado para Bootstrap 5"></li>
+                    <li class="list-inline-item m-0"><img class="img-fluid shadow rounded-circle grow" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" src="../assets/img/websites/sass-icon.jpg" title="Arquivo SASS disponível"></li>
                 </ul>
                 <h1 class="position-relative mt-3" style="color: var(--bs-dark);">{{detail.title}}<br></h1>
                 <p class="mb-0">{{detail.brief}}<br></p>
@@ -85,12 +89,8 @@
                     <p class="text-justify">Todos os componentes são totalmente responsivos e ficam ótimos em todos os tamanhos da tela.<br><br></p>
                 </div>
                 <div class="text-center"><p class="text-center "> <i class="fa fa-lock"></i> Pagamento Seguro pela<b> Hotmart </b> com: <br><br> <i class="fa fa-cc-paypal fa-2x"></i> <i class="fa fa-cc-visa fa-2x"></i> <i class="fa fa-cc-mastercard fa-2x"></i> <i class="fa fa-cc-amex fa-2x"></i> </p></div>
-                <div class="m-auto"><a class="btn btn-primary btn-lg over-y shadow text-white" role="button" style="font-family: Anton, sans-serif;background: var(--bs-success);border-style: none;" v-bind:href="detail.cart"><i class="icon ion-ios-cart mx-1"></i>Adquirir</a></div><iframe src="https://www.instagram.com/p/Bx4uud9lenK/embed" allowtransparency="true" frameborder="0" scrolling="no" class="notices card-websites" width="300" height="400"></iframe>
+                <div class="m-auto"><a class="btn btn-lg over-y shadow text-white btn-buy" role="button" style="font-family: Anton, sans-serif;border-style: none;" v-bind:href="detail.cart"><i class="icon ion-ios-cart mx-1"></i>Adquirir</a></div><iframe src="https://www.instagram.com/p/Bx4uud9lenK/embed" allowtransparency="true" frameborder="0" scrolling="no" class="notices card-websites" width="300" height="400"></iframe>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid m-0">
-        <div class="row backend">
             <div class="col-lg-8 offset-lg-2 mt-5">
                 <h2 style="color: var(--bs-dark);font-family:Anton, sans-serif">Perguntas frequentes<br></h2><div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -126,13 +126,15 @@
 </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid m-0">
         <div class="row">
             <div class="col-lg-12 text-center pt-0 mb-0">
                 <div class="row">
-                    <div class="col col-12 bg-white">
+                    <div class="col col-12 bg-dark">
                         <!-- Start: Intro -->
-                        <div>
-                            <h2 class="text-start text-sm-start text-md-center text-lg-center text-xl-center text-xxl-center mt-5" style="font-family: Anton, sans-serif;color: var(--bs-dark);">Gostaria de receber um contato?</h2>
+                        <div class="footer">
+                            <h2 class="text-start text-sm-start text-md-center text-lg-center text-xl-center text-xxl-center mt-5" style="font-family: Anton, sans-serif;">Gostaria de receber um contato?</h2>
                             <p class="text-start text-sm-start text-md-center text-lg-center text-xl-center text-xxl-center m-auto mb-1">Quer saber mais sobre nossos serviços?&nbsp;<br></p>
                             <p class="text-start text-sm-start text-md-center text-lg-center text-xl-center text-xxl-center m-auto mb-1">Quer melhorar o ranking do seu site?&nbsp;<br></p>
                             <p class="text-start text-sm-start text-md-center text-lg-center text-xl-center text-xxl-center m-auto mb-1">Precisa de app ou templates?<br></p>
@@ -164,7 +166,10 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="../assets/js/script.min.js"></script>
     <script src="../assets/js/db.min.js"></script>
 </body>
