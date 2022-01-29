@@ -1,0 +1,14 @@
+@mixin float($item) {
+    .float-#{$item} {
+        float: $item;
+        clear: $item;
+    }
+    @media screen and (max-width: 767.98px) {
+        .sm-float-#{$item} {
+            float: $item !important;
+            clear: $item !important;
+        }
+    }
+}
+@include float(left);
+@include float(right);

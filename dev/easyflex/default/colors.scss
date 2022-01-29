@@ -1,0 +1,41 @@
+/* ----------------------- color guide for this system ---------------------- */
+
+$theme-colors: (
+  "soft-green":#b2dd4c,
+  "green": #24c842,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "orange": #eb5732,
+  "soft-white": #f4f2f3,
+  "hard-white": #e2e2e2,
+  "gray": #b1b9b8,
+  "hard-gray": #9ba3a2,
+  "soft-purple": #f806d0,
+  "purple": purple,
+  "hard-purple": #491852,
+  "red": #db3c20,
+  "yellow": #ff7200,
+  "white": #fff,
+  "blue": #0d0d4b,
+  "dark": #121212,
+  "dark-2": #1e1e1e,
+  "black": #000,
+  "violet": #f12d96,
+  "soft-blue": #50afe9,
+  "ghost": #c7cdd5,
+);
+
+@each $name, $color in $theme-colors {
+  .#{$name} {
+    color: $color;
+    &:hover {
+      color: $color !important;
+    }
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}

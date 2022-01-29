@@ -1,0 +1,50 @@
+
+/* ------------------------ default typography system ----------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter&family=Nunito&display=swap");
+
+@mixin fonts($name, $value) {
+    .#{$name} {
+        font-family: $value, sans-serif;
+    }
+}
+$heading: "Archivo";
+$subheading: "Inter";
+$paragraph: "Nunito";
+$text-sizing: (
+    "h1": 2.25rem,
+    "h2": calc(2.25rem - 10%),
+    "h3": calc(2.25rem - 15%),
+    "h4": calc(2.25rem - 20%),
+    "h5": calc(2.25rem - 25%),
+    "h6": calc(2.25rem - 30%),
+    "p": calc(2.25rem - 30%),
+    "small": calc(2.25rem - 30%),
+    "span": calc(2.25rem - 30%),
+    "input": calc(2.25rem - 30%),
+);
+
+@each $tag, $size in $text-sizing {
+
+}
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-family: $heading;
+    }
+}
+@for $i from 4 through 6 {
+    h#{$i} {
+        font-family: $subheading;
+    }
+}
+
+
+small,
+p,
+span,
+ol,
+ul,
+li, a, input, label, select, textarea, button, fieldset, legend, datalist, output, option, optgroup {
+    font-family: $paragraph !important;
+    font-size: 0.8rem;
+}
+

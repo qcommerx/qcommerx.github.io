@@ -1,0 +1,18 @@
+@mixin display($item) {
+    .display-#{$item} {
+        display: $item !important;
+    }
+    @media screen and (max-width: 767.98px) {
+        .sm-display-#{$item} {
+            display: $item !important;
+        }
+    }
+}
+@include display(none);
+@include display(flex);
+@include display(block);
+@include display(grid);
+@include display(table);
+@include display(inline-flex);
+@include display(inline-block);
+
