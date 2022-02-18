@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: file:///C:\Users\silva\Documents\Publii\sites\qcommerx-um-blog-para-seo-tecnologia-e-marcas\preview/sitemap.xml
