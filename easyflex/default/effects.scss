@@ -1,0 +1,37 @@
+.underline:hover {
+    border-bottom: 1px solid !important;
+    border-color: inherit !important;
+}
+
+.filled:hover {
+}
+
+.opacity:hover {
+    opacity: 0.7 !important;
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.card {
+  position: relative;
+  //display: flex;
+  align-self: auto;
+  height: 100% !important;
+  overflow: hidden;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 8px;
+  margin: 0.5rem;
+  /* ---------------------------- padding: 0.5rem; ---------------------------- */
+}
+
+.shadow {
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.24));
+  box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15), 0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+}

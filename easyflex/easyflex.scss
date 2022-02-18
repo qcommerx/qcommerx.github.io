@@ -1,0 +1,180 @@
+@import "./default/forms.scss";
+@import "./default/float.scss";
+@import "./default/margin-padding.scss";
+@import "./default/display.scss";
+@import "./default/colors.scss";
+@import "./default/font.scss";
+@import "./default/position.scss";
+@import "./default/flexbox.scss";
+@import "./default/tags.scss";
+@import "./default/typo.scss";
+@import "./default/effects.scss";
+@import "./default/z-index.scss";
+//@import "./default/custom.scss";
+
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0px 2px;
+  background: #000;
+  display: inline-block;
+  color: #fff;
+  border-radius: 3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+.panels {
+  background: #fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height: 200px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.radio {
+  display: none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel {
+  display: block;
+}
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab {
+  background: #fffffff6;
+  color: #000;
+  border-top: 3px solid #000;
+}
+
+
+
+body {
+  background: url("../assets/images/SVG/bg-wave.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #dcdceb;
+  height: auto;
+}
+
+.bg-darkblue {
+  background-color: #264759;
+}
+
+
+
+
+
+
+.d-card {
+  position: relative;
+  //display: flex;
+  align-self: auto;
+  overflow: hidden;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-clip: border-box;
+  padding: 0.5rem;
+  /* ---------------------------- padding: 0.5rem; ---------------------------- */
+}
+
+.article {
+  line-height: 150%;
+}
+$b-round: (
+  "1": 0.4rem,
+  "2": 0.8rem,
+  "3": 1.2rem,
+);
+
+@each $name, $item in $b-round {
+  .round-#{$name} {
+    border-radius: $item;
+  }
+}
+
+.bg-darkblack {
+  background-color: #20252b;
+}
+
+.darkwhite {
+  color: #dcdceb;
+}
+
+$font-weight: (
+  "1": 100,
+  "2": 200,
+  "3": 30,
+  "4": 400,
+  "5": 500,
+  "6": 600,
+  "7": 700,
+  "8": 800,
+  "9": 900,
+);
+
+@each $name, $item in $font-weight {
+  .font-weight-#{$name} {
+    font-weight: $item !important;
+  }
+}
+
+.circle-item {
+  list-style-type: none;
+  vertical-align: middle;
+  height: 100%;
+  &::before {
+    vertical-align: middle;
+    height: 100%;
+    content: "";
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 15px;
+    height: 15px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #20252b;
+  }
+  
+    &:not(:last-child)::after {
+      content:";";
+    }
+    &:last-child::after {
+      content:".";
+    }
+}
+
+
+.border-left {
+  border-left: .3rem solid #f9ca25;
+
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

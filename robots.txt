@@ -1,3 +1,4 @@
 User-agent: *
 Disallow:
-Sitemap: https://qcommerx.com.br/sitemap.xml
+Crawl-delay: 60
+Sitemap: https://www.qcommerx.com.br/sitemap.xml

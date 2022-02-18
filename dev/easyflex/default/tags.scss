@@ -1,0 +1,101 @@
+/* ------------------------ tag default customization ----------------------- */
+html {
+    scroll-behavior: smooth;
+    body {
+        margin: 0;
+        padding: 0;
+        &::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+        small,
+        p,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        ol,
+        ul,
+        li,
+        a {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            &:hover,
+            &:active {
+                text-decoration: none;
+                color: inherit;
+                /* ---------------------------- font-weight: 800; --------------------------- */
+            }
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            vertical-align: middle;
+            align-items: center;
+            display:inline-flex;
+            position: relative;
+            
+        }
+        
+        @mixin list($item, $value, $param) {
+            .#{$item}{
+                ul, ol {
+                    width: auto;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display:$value;
+                    li{
+                        display:$value;
+                        margin: $param;
+                    }
+                }
+            }
+        }
+        @include list("list-flex",inline-flex ,0 .2rem 0 .2rem);
+        @include list("list-block",block ,.2rem 0 .2rem 0);
+        
+    }
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
+    }
+    footer {
+        bottom: 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    code {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        border-left: 3px solid rgb(228, 4, 228);
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: .7rem;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    }
+    
+}

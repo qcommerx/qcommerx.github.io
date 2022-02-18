@@ -1,0 +1,21 @@
+@mixin z-index($item) {
+    .z-index-#{$item} {
+        z-index: $item;
+    }
+    @media screen and (max-width: 767.98px) {
+        .sm-z-index-#{$item} {
+            z-index: $item !important;
+        }
+    }
+}
+@include z-index(-5);
+@include z-index(-4);
+@include z-index(-3);
+@include z-index(-2);
+@include z-index(-1);
+@include z-index(0);
+@include z-index(1);
+@include z-index(2);
+@include z-index(3);
+@include z-index(4);
+@include z-index(5);

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://qcommerx.com.br/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://qcommerx.com.br/</loc>
-</url>
-<url>
-<loc>https://qcommerx.com.br/as-melhores-dicas-de-seo/</loc>
-<lastmod>2022-02-20T18:54:28-03:00</lastmod>
-</url>
-<url>
-<loc>https://qcommerx.com.br/tags/mecanismos-de-pesquisa/</loc>
-</url>
-<url>
-<loc>https://qcommerx.com.br/tags/seo/</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://www.qcommerx.com.br/a-empresa/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/ebook/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/privacidade/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/site-auditor/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/websites/promo/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/websites/</loc>
+    </url>
+    <url>
+        <loc>https://www.qcommerx.com.br/</loc>
+    </url>
 </urlset>

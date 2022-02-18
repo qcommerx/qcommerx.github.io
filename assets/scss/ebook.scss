@@ -1,0 +1,47 @@
+.h2, .p {
+	margin-top:0 !important;
+	font-size: 1.2rem !important;
+	font-family: var(--qc-paragraph-font) !important;
+}
+
+.h3 {
+	font-size: 1.2rem !important;
+	font-family: var(--qc-heading-font) !important;
+}
+
+.e-shadow {
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.24));
+  box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, 0.15), 0 8px 9px -5px hsla(0, 0%, 8%, 0.06) !important;
+}
+
+body {
+	background: #FFD24D;
+	.landing {
+		@media screen and (max-width: 797.98px) {
+			height: 190vh;
+		}
+		@media screen and (max-width: 798px) {
+			height: auto;
+		}
+		height: 100vh;
+		a {
+			font-family: 'Anton';
+		}		
+	}
+	.product {
+		a {
+			font-family: 'Anton';
+		}
+		background: #e2e2e2;
+	}
+	.contact {
+		background: #f4f2f3;
+	}
+	.footer {
+		background: #1e1e1e;
+		color:#fff;
+		h2, p, *  {
+		color:#fff !important;
+		}
+	}
+}
