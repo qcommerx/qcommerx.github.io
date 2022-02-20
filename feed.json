@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "QCOMMERX: Um Blog para SEO, Tecnologia e Marcas",
+    "description": "",
+    "home_page_url": "https://qcommerx.com.br/blog",
+    "feed_url": "https://qcommerx.com.br/blog/feed.json",
+    "user_comment": "",
+    "icon": "https://qcommerx.com.br/blog/media/website/logo.png",
+    "author": {
+        "name": "Wladimir Silva Junior"
+    },
+    "items": [
+        {
+            "id": "https://qcommerx.com.br/blog/as-melhores-dicas-de-seo/",
+            "url": "https://qcommerx.com.br/blog/as-melhores-dicas-de-seo/",
+            "title": "As melhores dicas de SEO ",
+            "summary": " A otimização do mecanismo de pesquisa (SEO) é o processo de afetar a visibilidade de um site ou página da Web nos resultados não&hellip;",
+            "content_html": "\n  <p>\n    A otimização do mecanismo de pesquisa (SEO) é o processo de afetar a visibilidade de um site ou página da Web nos resultados não pagos de um mecanismo de pesquisa - geralmente chamados de resultados \"naturais\", \"orgânicos\" ou \"obtidos\".<br><br>O SEO pode segmentar diferentes tipos de pesquisa, incluindo pesquisa de imagens, pesquisa local, pesquisa de vídeo, pesquisa acadêmica, pesquisa de notícias e pesquisas verticais específicas do setor. O SEO pode segmentar versões de idiomas diferentes do mesmo site e dispositivos diferentes.\n  </p>\n\n  <p>\n    A seguir estão algumas dicas básicas para SEO:\n  </p>\n\n  <p>\n    <strong>Defina o titulo da sua pagina: </strong>Tente escrever no máximo 50 caracteres, para que seja bem visualizado na pagina SERP do Google.\n  </p>\n\n  <p>\n    <strong>Defina a descrição da pagina:</strong> A descrição ajuda a localizar sua página, com base nas pesquisas que os usuários estão fazendo.\n  </p>\n\n  <p>\n    <strong>Defina as palavras-chaves: </strong>As palavras chaves são muito importantes para que seu site possa ser localizado pelos mecanismos de pesquisa.&nbsp;\n  </p>\n\n  <p>\n    Existem outras melhorias de SEO, e que apresentarei nos próximos posts.\n  </p>\n\n  <p>\n    Até a próxima!\n  </p>",
+            "author": {
+                "name": "Wladimir Silva Junior"
+            },
+            "tags": [
+                   "SEO",
+                   "Mecanismos de Pesquisa"
+            ],
+            "date_published": "2022-02-12T20:41:33-03:00",
+            "date_modified": "2022-02-20T18:54:28-03:00"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>QCOMMERX: Um Blog para SEO, Tecnologia e Marcas</title>
+    <link href="https://qcommerx.com.br/blog/feed.xml" rel="self" />
+    <link href="https://qcommerx.com.br/blog" />
+    <updated>2022-02-20T18:54:28-03:00</updated>
+    <author>
+        <name>Wladimir Silva Junior</name>
+    </author>
+    <id>https://qcommerx.com.br/blog</id>
+
+    <entry>
+        <title>As melhores dicas de SEO </title>
+        <author>
+            <name>Wladimir Silva Junior</name>
+        </author>
+        <link href="https://qcommerx.com.br/blog/as-melhores-dicas-de-seo/"/>
+        <id>https://qcommerx.com.br/blog/as-melhores-dicas-de-seo/</id>
+            <category term="SEO"/>
+            <category term="Mecanismos de Pesquisa"/>
+
+        <updated>2022-02-20T18:54:28-03:00</updated>
+            <summary>
+                <![CDATA[
+                     A otimização do mecanismo de pesquisa (SEO) é o processo de afetar a visibilidade de um site ou página da Web nos resultados não&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    A otimização do mecanismo de pesquisa (SEO) é o processo de afetar a visibilidade de um site ou página da Web nos resultados não pagos de um mecanismo de pesquisa - geralmente chamados de resultados "naturais", "orgânicos" ou "obtidos".<br><br>O SEO pode segmentar diferentes tipos de pesquisa, incluindo pesquisa de imagens, pesquisa local, pesquisa de vídeo, pesquisa acadêmica, pesquisa de notícias e pesquisas verticais específicas do setor. O SEO pode segmentar versões de idiomas diferentes do mesmo site e dispositivos diferentes.
+  </p>
+
+  <p>
+    A seguir estão algumas dicas básicas para SEO:
+  </p>
+
+  <p>
+    <strong>Defina o titulo da sua pagina: </strong>Tente escrever no máximo 50 caracteres, para que seja bem visualizado na pagina SERP do Google.
+  </p>
+
+  <p>
+    <strong>Defina a descrição da pagina:</strong> A descrição ajuda a localizar sua página, com base nas pesquisas que os usuários estão fazendo.
+  </p>
+
+  <p>
+    <strong>Defina as palavras-chaves: </strong>As palavras chaves são muito importantes para que seu site possa ser localizado pelos mecanismos de pesquisa.&nbsp;
+  </p>
+
+  <p>
+    Existem outras melhorias de SEO, e que apresentarei nos próximos posts.
+  </p>
+
+  <p>
+    Até a próxima!
+  </p>
+            ]]>
+        </content>
+    </entry>
+</feed>
