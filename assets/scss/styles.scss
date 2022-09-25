@@ -1,0 +1,133 @@
+// start typography settings
+@for $i from 1 through 6 {
+  h#{$i} {
+	  font-family: "NexaBold" !important;
+  }
+}
+
+$tags: p, small, span, a, button, ul, li;
+@each $tag in $tags {
+  #{$tag} {
+	  font-family: "NexaLight" !important;
+  }
+}
+
+
+$light-yellow: #F2BF27;
+$dark-yellow: #F2AB27;
+$soft-black: #222222;
+$dark-black: #0C0D0F;
+$soft-white: #FEFCFF;
+$dark-white: #E5E4E2;
+$orange-gold: #F27405;
+
+:root {
+  --light-yellow: #{$light-yellow};
+  --dark-yellow: #{$dark-yellow};
+  --soft-black: #{$soft-black};
+  --dark-black: #{$dark-black};
+  --soft-white: #{$soft-white};
+  --dark-white: #{$dark-white};
+  --orange-gold: #{$orange-gold};
+  --bs-primary: #212529 !important;
+}
+// end typography settings
+
+
+// staring styling elements
+body {
+	background-color: var(--soft-white) !important;
+}
+
+$classes: bs-icon, btn, form-control, navbar-toggler;
+@each $class in $classes {
+	[class*=#{$class}] {
+		border-radius: 0.125rem !important;
+		
+		&:focus {
+			outline: none !important;
+			border-color: var(--bs-primary);
+			box-shadow: none !important;
+		}
+	}
+}
+
+ul{
+	  list-style-type: none;
+}
+
+// ripple effect depends of ripple.js
+button, .btn {
+  position: relative;
+  overflow: hidden;
+  transition: background 400ms;
+  cursor: pointer;
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+// ripple effect depends of ripple.js
+
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  body {
+    &::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+
+	}
+}
+
+.web-searched {
+	line-height: 1rem !important;
+	vertical-align: super !important;
+	padding-top: 0rem !important;
+}
+// end styling elements
+
+
+// new breakpoints
+
+@media (max-width: 575.98px)
+{
+  .w-xs-100
+   {
+    	width: 100% !important;
+	   	margin-left:0rem !important;
+   }
+}
+
+@media (max-width: 767.98px)
+{
+  .w-sm-100
+   {
+    	width: 100% !important;
+	   	margin-left:0rem !important;
+   }
+}
+
+
