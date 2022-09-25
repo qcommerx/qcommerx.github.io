@@ -1,8 +1,0 @@
-User-Agent: *
-Allow: /
-Allow: /ebook
-Allow: /privacidade
-Allow: /aguarde
-
-Sitemap: https://www.qcommerx.com.br/sitemap.xml
-
