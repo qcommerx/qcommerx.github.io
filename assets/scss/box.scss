@@ -1,0 +1,51 @@
+             #page {
+                background-color: black;
+                z-index: 1;
+                position: fixed;
+                top: 0vh;
+                bottom:0vh;
+                left:0vw;
+                right: 0vw;
+                opacity: 1;
+            }
+            #page #box {
+                margin: auto;
+                z-index: 2;
+                padding: 1rem;
+                border-radius: 0.25rem;
+                position: fixed;
+                width: 60vw;
+                top:35vh;
+                left: 20vw;
+            }
+
+            #box .close {
+                position: absolute;
+                left: calc(60vw - 25px);
+                top: -20px;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 0.25rem;
+                display: flex;
+                align-items: center;
+                align-self: center;
+                justify-content: center;
+                vertical-align: middle;
+                margin: 1rem;
+				z-index:10;
+            }
+
+            #box a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #box a:hover {
+                text-decoration: none;
+            }
+
+            .closemodal {
+                visibility: hidden !important;
+            }
