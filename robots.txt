@@ -1,7 +1,7 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /login/
-Disallow: /cart/
+Disallow: /ds/
 Disallow: /checkout/
 
 # Allow all other pages to be crawled
